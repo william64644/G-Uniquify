@@ -1,1 +1,18 @@
-Hello Worldddd
+<!DOCTYPE html>
+<html>
+  <script>
+function processText() {
+  const input = document.getElementById("input-text").value;
+  const output = input.split("").reverse().join("");
+  document.getElementById("output").innerHTML = output;
+}
+  </script>
+  <head>
+    <title>Text Processing</title>
+  </head>
+  <body>
+    <textarea id="input-text" rows="10" cols="50"></textarea>
+    <button onclick="processText()">Process</button>
+    <div id="output"></div>
+  </body>
+</html>
