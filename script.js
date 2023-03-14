@@ -24,6 +24,7 @@ copyButton.addEventListener("click", () => {
 
 // Function to process the input text
 function processText(inputText) {
-  const processedText = inputText.replace(/\s+/g, "-");
-  return processedText;
+  const reversedStr = inputText.split('').reverse().join('');
+  // Return the reversed string
+  return reversedStr;
 }
