@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>G-Uniquify</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Text Processing</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <textarea id="input-text" rows="10" cols="50"></textarea>
-    <button onclick="processText()">Process</button>
-    <div id="output"></div>
-    <button onclick="copyToClipboard()">Copy</button>
+    <div class="container">
+      <h1>Text Processing</h1>
+      <div class="row">
+        <div class="column">
+          <label for="input">Input:</label>
+          <textarea id="input" placeholder="Enter your text here..."></textarea>
+        </div>
+        <div class="column">
+          <button id="process-btn">Process</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="output">Output:</label>
+          <textarea id="output" readonly></textarea>
+        </div>
+        <div class="column">
+          <button id="copy-btn">Copy to Clipboard</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
-  
-  <script>
-    function processText() {
-      const input = document.getElementById("input-text").value;
-      const output = input.split("").reverse().join("");
-      document.getElementById("output").innerHTML = output;
-    }
-    
-    function copyToClipboard() {
-      const output = document.getElementById("output").textContent;
-      navigator.clipboard.writeText(output)
-        .then(() => alert("Copied to clipboard"))
-        .catch((err) => alert(`Error copying to clipboard: ${err}`));
-    }
-  </script>
 </html>
