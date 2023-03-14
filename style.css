@@ -1,16 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: #333333; /* change background color to dark grey */
 }
 
 textarea {
   width: 100%;
-  max-width: 600px; /* limit the width of the textarea */
-  height: 150px; /* set the height of the textarea */
+  max-width: 600px;
+  height: 150px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
+  background-color: white; /* add background color to input box */
 }
 
 button {
@@ -32,6 +33,7 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
+  height: 150px; /* add height to output box */
 }
 
 #output.empty {
